@@ -1,0 +1,44 @@
+= PPI API
+AMTRUST;
+:doctype: book
+:icons: font
+:source-highlighter: highlightjs
+:toc: left
+:toclevels: 2
+
+== Test Onboarding
+
+include::{snippets}/testrest/auto-section.adoc[]
+==== Error Responses
+|===
+|Error Code|HTTP Error Code|Description
+
+|BadRequestException
+|400
+|Bad/Invalid request.
+
+|AuthenticationException
+|401
+|Unauthenticated User/missing API Key.
+
+|Forbidden
+|403
+|Operation declined by processor or blocked by rulesets.
+
+|ModelStateInvalid
+|404
+|Transaction,Account or Organisation not found.
+
+|Sever Error
+|500
+|Unexpected Error.
+
+|Sever Error
+|501
+|Unsupported payment method or Processor.
+
+|Sever Error
+|503
+|Processor temporarily unavailable.
+
+|===
